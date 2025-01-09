@@ -17,3 +17,7 @@ Scenario: Incorrect pin
 Scenario: Unknowing ID
     When I login to ATM with id 9 and pin 222
     Then I cannot login
+
+    Scenario: Unknowing ID with same password
+        When I login to ATM with id 9 and pin 111
+        Then I cannot login
